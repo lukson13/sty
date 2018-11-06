@@ -1,0 +1,150 @@
+:root{
+    --light: #d3d3d3;
+    --lighter: #e0e0e0;
+    --dark: #9e9e9e;
+    --shadow: 0 1px 5px rgba(143, 25, 25, 0.8);
+
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--lighter);
+}
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+nav{
+    position: sticky;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.box{
+    color: white;
+    background: var(--dark);
+    padding: 2px 5px;
+}
+.box-shadow{
+    box-shadow: var(--shadow);
+}
+.box-:hover{
+    color: var(--dark);
+    background: white;
+    cursor: pointer;
+}
+.questions{
+    display: grid;
+    grid-gap: 40px;
+}
+.qitem{
+    display: grid;
+    grid-row-gap: 20px;
+    padding: 20px;
+    outline: white 1px dotted;
+}
+.content{
+    padding: 10px;
+}
+.answer{
+    display: grid;
+    grid-row-gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.aitem{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+.aitem i:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.addanswer{
+    min-width: auto;
+    max-width: 100%;
+}
+.addanswer p{
+    text-align: center;
+}
+.addanswer i{
+    width: 100%;
+    text-align: center;
+}
+.addanswer:hover{
+    color: black;
+    background: var(--light);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.addquestion{
+    min-width: auto;
+    max-width: 100%;
+}
+.addquestion p{
+    text-align: center;
+}
+.addquestion i{
+    width: 100%;
+    text-align: center;
+}
+
+.addquestion:hover{
+    color: black;
+    background: var(--light);
+    box-shadow: none;
+    cursor: pointer;
+}
+.textarea{
+    box-shadow: none;
+    font-size: 1rem;
+    display: block;
+    border: var(--light) 1px solid;
+    border-radius: 8px;
+    background: var(--dark);
+    color: white;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 60px;
+    padding: 2px 5px;
+    resize: vertical;
+}
+
+@media(max-width: 880px){
+    nav{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 450px){
+    nav{
+        grid-template-columns: 1fr;
+    }
+}
+@media(min-width: 450px){
+    .addanswer p{
+        display: inline-block;
+        text-align: center;
+    }
+    .addanswer i{
+        display: inline-block;
+        width: 200px;
+        vertical-align: middle;
+    }
+    .addquestion p{
+        display: inline-block;
+        text-align: center;
+    }
+    .addquestion i{
+        display: inline-block;
+        width: 200px;
+        vertical-align: middle;
+    }
+}
